@@ -1,4 +1,5 @@
 $base-color: #ff3754;
+$mobile: 320px;
 
 body {
   margin: 0;
@@ -11,6 +12,13 @@ body {
   background-image: url(img/00.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media screen and (max-width: $mobile) {
+    padding: 10px 9px 30px 10px;
+
+    background-image: url(img/mobile/header_background320.png);
+    background-size: contain;
+  }
 }
 
 .header-top {
@@ -18,8 +26,22 @@ body {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-between;
+  padding-left: 4px;
 }
 
+.header-logo {
+  width: 219px;
+  height: 58px;
+  background-image: url(/img/header_logo.svg);
+  @media screen and (max-width: $mobile) {
+    width: 102px;
+    height: 27px;
+    padding-left: 4px;
+
+    background-image: url(/img/mobile/header_LOGO320.svg);
+    background-repeat: no-repeat;
+  }
+}
 .phone-number {
   position: relative;
   padding-right: 42px;
@@ -41,6 +63,9 @@ body {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
 }
 
 header li {
@@ -49,6 +74,9 @@ header li {
 
 .header-list__social-item {
   padding-right: 28px;
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .header-list__btn-menu {
@@ -60,6 +88,28 @@ header li {
   flex-direction: column;
   justify-content: space-between;
   align-self: center;
+  @media screen and (max-width: $mobile) {
+    padding: 0;
+  }
+}
+.btn-menu_rectangle {
+  width: 50px;
+  height: 2px;
+
+  background-image: url(/img/header-top_btn-menu-rectangle.svg);
+
+  @media screen and (max-width: $mobile) {
+    padding: 0;
+    width: 35px;
+    height: 2px;
+
+    background-image: url(/img/mobile/header-top_btn-menu-rectangle320.svg);
+  }
+}
+
+.heaeder-content {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .header-h1 {
@@ -71,6 +121,12 @@ header li {
   text-transform: uppercase;
 
   color: #ffffff;
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 103px;
+    font-size: 50px;
+    line-height: 50px;
+  }
 }
 
 .header-h3 {
@@ -80,6 +136,11 @@ header li {
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
   font-size: 50px;
   color: #ffffff;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .header-h3__pink {
@@ -88,6 +149,10 @@ header li {
 
 .content-awards {
   padding: 0;
+
+  @media screen and (max-width: $mobile) {
+    order: 1;
+  }
 }
 
 .awards-item {
@@ -95,39 +160,140 @@ header li {
   display: flex;
   align-items: center;
 
-  img {
-    padding-right: 52px;
-    width: 22px;
-    height: 22px;
+  @media screen and (max-width: $mobile) {
+    height: 40px;
   }
 
-  div {
-    font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
-    font-size: 24px;
-    line-height: 29px;
+  &:nth-child(1) .award-item__award {
+    width: 70px;
+    height: 70px;
+
+    background-image: url(/img/award_1.svg);
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $mobile) {
+      width: 47px;
+      height: 47px;
+
+      background-image: url(/img/mobile/award_01_320.svg);
+    }
+  }
+
+  &:nth-child(2) .award-item__award {
+    width: 70px;
+    height: 70px;
+
+    background-image: url(/img/award_02.svg);
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $mobile) {
+      width: 47px;
+      height: 47px;
+
+      background-image: url(/img/mobile/award_02_320.svg);
+    }
+  }
+  // &:nth-child(3) {
+
+  // }
+
+  &:nth-child(3) .award-item__award {
+    width: 32px;
+    height: 40px;
+
+    padding-left: 19px;
+    padding-right: 19px;
+
+    background: url(/img/award_03.svg) 50% 50% no-repeat;
+
+    @media screen and (max-width: $mobile) {
+      width: 22px;
+      height: 27px;
+
+      padding-left: 12.5px;
+      padding-right: 12.5px;
+
+      background: url(/img/mobile/award_03_320.svg) 50% 50% no-repeat;
+    }
+  }
+  &:nth-child(4) .award-item__award {
+    width: 70px;
+    height: 70px;
+
+    background-image: url(/img/award_02.svg);
+    background-repeat: no-repeat;
+
+    @media screen and (max-width: $mobile) {
+      width: 47px;
+      height: 47px;
+
+      background-image: url(/img/mobile/award_02_320.svg);
+    }
+  }
+}
+
+.award-item__title {
+  font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  color: #ffffff;
+  text-transform: lowercase;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 14px;
+    line-height: 17px;
+    color: #303030;
+  }
+}
+
+.award-item__title-pink-backgr {
+  height: 50px;
+  padding-left: 8px;
+  padding-right: 8px;
+
+  display: flex;
+  align-items: center;
+
+  background-color: $base-color;
+  border-radius: 4px;
+
+  font-size: 36px;
+  text-transform: none;
+
+  @media screen and (max-width: 1024px) {
+    height: 34px;
+    padding-left: 6px;
+    padding-right: 6px;
+
+    font-size: 20px;
     color: #ffffff;
-    text-transform: lowercase;
   }
 }
 
-.awards-item__focus {
-  div {
-    height: 50px;
-    padding-left: 8px;
-    padding-right: 8px;
-
-    display: flex;
-    align-items: center;
-
-    background-color: $base-color;
-    border-radius: 4px;
-
-    font-size: 36px;
-    text-transform: none;
+.award-item__award svg {
+  @media screen and (max-width: 1024px) {
+    height: 34px;
   }
 }
-.header-bottom {
+.award-item__worldwide {
+  padding-right: 52px;
+  width: 22px;
+  height: 22px;
+
+  @media screen and (max-width: $mobile) {
+    padding-right: 13px;
+    width: 15px;
+    height: 15px;
+  }
+}
+
+.header-btn {
   padding-top: 79px;
+  @media screen and (max-width: $mobile) {
+    padding-top: 13px;
+    padding-bottom: 12px;
+    order: 0;
+  }
 }
 
 .header-btn a {
@@ -150,6 +316,13 @@ header li {
   border: 1px solid #ff3754;
   box-sizing: border-box;
   border-radius: 4px;
+
+  @media screen and (max-width: $mobile) {
+    width: 300px;
+
+    font-size: 16px;
+    line-height: 19px;
+  }
 }
 
 .main-profiles {
@@ -162,6 +335,10 @@ header li {
 
   max-width: 100%;
   background: #ffffff;
+
+  @media screen and (max-width: $mobile) {
+    padding: 32px 10px 30px 10px;
+  }
 }
 
 .main-h2 {
@@ -172,6 +349,13 @@ header li {
   font-size: 70px;
   text-transform: uppercase;
   color: #ff3754;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .b-slider {
@@ -184,6 +368,9 @@ header li {
 .b-slider-scope {
   display: flex;
   flex-direction: column;
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
 }
 
 .scope__rectangle {
@@ -205,6 +392,12 @@ header li {
 
 .slider_text {
   width: 49%;
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .slider__item {
@@ -217,6 +410,13 @@ header li {
   flex-wrap: nowrap;
   padding-left: 96px;
   padding-right: 96px;
+
+  @media screen and (max-width: $mobile) {
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
 
 .slider-item__h2 {
@@ -229,6 +429,14 @@ header li {
   line-height: 70px;
   text-transform: uppercase;
   color: #ff3754;
+
+  @media screen and (max-width: $mobile) {
+    padding-top: 27px;
+    padding-bottom: 14px;
+
+    font-size: 40px;
+    line-height: 40px;
+  }
 }
 
 .slider-item__h4 {
@@ -240,6 +448,11 @@ header li {
   line-height: 40px;
   text-transform: uppercase;
   color: #888888;
+
+  @media screen and (max-width: $mobile) {
+    font-size: 30px;
+    line-height: 30px;
+  }
 }
 
 .slider-item__h6 {
@@ -253,6 +466,29 @@ header li {
   letter-spacing: 0.155em;
   text-transform: uppercase;
   color: #303030;
+}
+
+.slider-item__btn-hide {
+  display: none;
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 156px;
+    height: 40px;
+
+    border: 1px solid #888888;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    color: #888888;
+  }
 }
 
 .main__text {
@@ -277,8 +513,13 @@ header li {
 }
 .slider-item__list-item {
   list-style-image: url(/img/profiles_list-style.svg);
+
   span {
     padding-left: 29px;
+
+    @media screen and (max-width: $mobile) {
+      padding-left: 11px;
+    }
   }
 }
 
@@ -290,6 +531,12 @@ header li {
   border: none;
   background-repeat: no-repeat;
   background-size: cover;
+  @media screen and (max-width: $mobile) {
+    width: 128px;
+    height: 128px;
+    order: -1;
+    border-radius: 64px;
+  }
 }
 
 .slider-avatar__1 {
@@ -313,7 +560,10 @@ header li {
   justify-content: space-between;
   align-items: center;
   width: 225px;
-  padding-top: 62px;
+  padding-top: 32px;
+  @media screen and (max-width: $mobile) {
+    width: 196px;
+  }
 }
 
 .slider-numeration {
@@ -341,7 +591,7 @@ header li {
 }
 
 .main-partners {
-  padding: 69px 88px 120px 88px;
+  padding: 69px 88px 76px 88px;
 
   display: flex;
   flex-wrap: nowrap;
@@ -349,13 +599,74 @@ header li {
   align-items: center;
   max-width: 100%;
 
-  background: linear-gradient(180deg, #FDF4F4 0%, #ECF3EC 100%);;
-}
+  background: linear-gradient(180deg, #fdf4f4 0%, #ecf3ec 100%);
 
+  @media screen and (max-width: $mobile) {
+    padding: 38px 10px 40px 10px;
+  }
+}
 
 .main-h2 {
   margin-bottom: 0;
   padding-bottom: 46px;
+
+  @media screen and (max-width: $mobile) {
+    padding-bottom: 40px;
+  }
+}
+
+.main-h2__partners {
+  @media screen and (max-width: $mobile) {
+    padding-bottom: 36px;
+  }
+}
+
+.years {
+  display: none;
+
+  @media screen and (max-width: $mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.years-item {
+  @media screen and (max-width: $mobile) {
+    width: 63px;
+    height: 40px;
+    margin-bottom: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 0.155em;
+    text-transform: uppercase;
+    color: #888888;
+
+    background-color: #ffffff;
+    border: 1px solid #888888;
+    box-sizing: border-box;
+    border-radius: 4px;
+
+    //  &:nth-child(2n+1) {
+    //   margin-right: 10px;
+    //  }
+  }
+}
+
+.years-item__center {
+  @media screen and (max-width: $mobile) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .partners-wrapper {
@@ -371,8 +682,79 @@ header li {
   align-items: center;
 
   width: 412px;
+
+  &:nth-child(4n-3) .parnters_card-img {
+    background-image: url(/img/partners_img_facebook.svg);
+
+    @media screen and (max-width: $mobile) {
+      background-image: url(/img/mobile/partners_img_facebook320.svg);
+    }
+  }
+  &:nth-child(4n-2) .parnters_card-img {
+    background-image: url(/img/partners_img_amazon.svg);
+
+    @media screen and (max-width: $mobile) {
+      background-image: url(/img/mobile/partners_img_amazon320.svg);
+    }
+  }
+  &:nth-child(4n-1) .parnters_card-img {
+    background-image: url(/img/partners_img_sony.svg);
+
+    @media screen and (max-width: $mobile) {
+      background-image: url(/img/mobile/partners_img_sony320.svg);
+    }
+  }
+  &:nth-child(4n) .parnters_card-img {
+    background-image: url(/img/partners_img_ae.svg);
+
+    @media screen and (max-width: $mobile) {
+      background-image: url(/img/mobile/partners_img_ae320.svg);
+    }
+  }
 }
 
+.parnters_card-img {
+  width: 442px;
+  height: 270px;
+
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media screen and (max-width: $mobile) {
+    width: 320px;
+    height: 150px;
+  }
+}
+
+.partners_card-description {
+  width: 412px;
+  padding-bottom: 56px;
+
+  @media screen and (max-width: $mobile) {
+    width: 300px;
+    padding-bottom: 11px;
+  }
+
+  .main__text {
+    @media screen and (max-width: $mobile) {
+      margin-top: 12px;
+      margin-bottom: 12px;
+
+      font-size: 16px;
+      line-height: 26px;
+    }
+  }
+  .main__text-bold {
+    @media screen and (max-width: $mobile) {
+      margin-top: 8px;
+      margin-bottom: 0;
+
+      font-size: 18px;
+      line-height: 29px;
+    }
+  }
+}
 
 .b-footer {
   display: flex;
@@ -380,8 +762,15 @@ header li {
   align-items: center;
   padding: 11px 85px 9px 88px;
   max-width: 100%;
+
+  @media screen and (max-width: $mobile) {
+    padding: 8px 4px 8px 17px;
+  }
 }
 
-.footer__copyright{
+.footer__copyright {
   font-weight: 700;
+  @media screen and (max-width: $mobile) {
+    text-transform: lowercase;
+  }
 }
