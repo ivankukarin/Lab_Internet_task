@@ -109,11 +109,6 @@ header li {
   }
 }
 
-.heaeder-content {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .header-h1 {
   margin: 0;
   padding-top: 1em;
@@ -128,6 +123,12 @@ header li {
     font-size: 50px;
     line-height: 50px;
   }
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .header-h3 {
@@ -151,6 +152,7 @@ header li {
 
 .content-awards {
   padding: 0;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 320px) {
   .content-awards {
@@ -250,7 +252,7 @@ header li {
   font-size: 36px;
   text-transform: none;
 }
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 320px) {
   .award-item__title-pink-backgr {
     height: 34px;
     padding-left: 6px;
@@ -260,7 +262,7 @@ header li {
   }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 320px) {
   .award-item__award svg {
     height: 34px;
   }
@@ -472,6 +474,11 @@ header li {
     border: 1px solid #888888;
     box-sizing: border-box;
     border-radius: 4px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .slider-item__btn-hide-text {
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
     font-size: 13px;
     line-height: 16px;
@@ -488,6 +495,11 @@ header li {
   color: #303030;
 }
 
+.main__text-small16 {
+  font-size: 16px;
+  line-height: 26px;
+}
+
 .main__text-bold {
   margin-bottom: unset;
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
@@ -496,7 +508,13 @@ header li {
   color: #000000;
 }
 
-.slider-item__content {
+@media screen and (max-width: 320px) {
+  .slider-item__content-text-hide {
+    display: none;
+  }
+}
+
+.slider-item__content-list {
   padding-left: 18px;
   padding-bottom: 10px;
 }
@@ -597,7 +615,7 @@ header li {
 }
 @media screen and (max-width: 320px) {
   .main-partners {
-    padding: 38px 10px 40px 10px;
+    padding: 38px 0px 40px 0px;
   }
 }
 
@@ -664,12 +682,23 @@ header li {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+@media screen and (max-width: 320px) {
+  .partners-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 .partners__card {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 412px;
+}
+@media screen and (max-width: 320px) {
+  .partners__card {
+    width: 320px;
+  }
 }
 .partners__card:nth-child(4n-3) .parnters_card-img {
   background-image: url(/img/partners_img_facebook.svg);

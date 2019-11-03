@@ -1,12 +1,24 @@
 window.onload = function() {
+  let btnHideSlideContent = document.querySelector(".slider-item__btn-hide");
+  let arrElementsContentText = document.querySelectorAll(
+    ".slider-item__content-text"
+  );
+
+  function toggleHideBlock(arrElements, classNameAdd) {
+    for (element of arrElements) {
+      element.classList.toggle(classNameAdd);
+    }
+  }
+
+  btnHideSlideContent.addEventListener("click", () => {
+    toggleHideBlock(arrElementsContentText, "slider-item__content-text-hide");
+  });
 
   function slider(block) {
     let sliderItems = block.querySelectorAll(".slider__item");
     let btnPrev = block.querySelector(".slider__arrow-prev");
     let btnNext = block.querySelector(".slider__arrow-next");
-    let currentSlide = block.querySelector(
-      ".slider-numeration__current-slide"
-    );
+    let currentSlide = block.querySelector(".slider-numeration__current-slide");
     let valueOfSlides = block.querySelector(
       ".slider-numeration__value-of-slides"
     );
@@ -65,6 +77,5 @@ window.onload = function() {
     checkSliderArrows();
   }
 
-  
   slider(document.querySelector(".main-profiles"));
 };

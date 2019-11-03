@@ -5,6 +5,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .header {
   padding: 25px 85px 84px 89px;
 
@@ -107,11 +108,6 @@ header li {
   }
 }
 
-.heaeder-content {
-  display: flex;
-  flex-wrap: nowrap;
-}
-
 .header-h1 {
   margin: 0;
   padding-top: 1em;
@@ -127,6 +123,12 @@ header li {
     font-size: 50px;
     line-height: 50px;
   }
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 
 .header-h3 {
@@ -149,6 +151,7 @@ header li {
 
 .content-awards {
   padding: 0;
+  margin-bottom: 0;
 
   @media screen and (max-width: $mobile) {
     order: 1;
@@ -193,9 +196,6 @@ header li {
       background-image: url(/img/mobile/award_02_320.svg);
     }
   }
-  // &:nth-child(3) {
-
-  // }
 
   &:nth-child(3) .award-item__award {
     width: 32px;
@@ -216,6 +216,7 @@ header li {
       background: url(/img/mobile/award_03_320.svg) 50% 50% no-repeat;
     }
   }
+
   &:nth-child(4) .award-item__award {
     width: 70px;
     height: 70px;
@@ -260,7 +261,7 @@ header li {
   font-size: 36px;
   text-transform: none;
 
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $mobile) {
     height: 34px;
     padding-left: 6px;
     padding-right: 6px;
@@ -271,7 +272,7 @@ header li {
 }
 
 .award-item__award svg {
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: $mobile) {
     height: 34px;
   }
 }
@@ -481,7 +482,11 @@ header li {
     border: 1px solid #888888;
     box-sizing: border-box;
     border-radius: 4px;
+  }
+}
 
+.slider-item__btn-hide-text {
+  @media screen and (max-width: $mobile) {
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
     font-size: 13px;
     line-height: 16px;
@@ -497,6 +502,10 @@ header li {
   line-height: 29px;
   color: #303030;
 }
+.main__text-small16 {
+  font-size: 16px;
+  line-height: 26px;
+}
 
 .main__text-bold {
   margin-bottom: unset;
@@ -507,10 +516,17 @@ header li {
   color: #000000;
 }
 
-.slider-item__content {
+.slider-item__content-text-hide {
+  @media screen and (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.slider-item__content-list {
   padding-left: 18px;
   padding-bottom: 10px;
 }
+
 .slider-item__list-item {
   list-style-image: url(/img/profiles_list-style.svg);
 
@@ -602,7 +618,7 @@ header li {
   background: linear-gradient(180deg, #fdf4f4 0%, #ecf3ec 100%);
 
   @media screen and (max-width: $mobile) {
-    padding: 38px 10px 40px 10px;
+    padding: 38px 0px 40px 0px;
   }
 }
 
@@ -674,6 +690,11 @@ header li {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  @media screen and (max-width: $mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .partners__card {
@@ -682,6 +703,10 @@ header li {
   align-items: center;
 
   width: 412px;
+
+  @media screen and (max-width: $mobile) {
+    width: 320px;
+  }
 
   &:nth-child(4n-3) .parnters_card-img {
     background-image: url(/img/partners_img_facebook.svg);
