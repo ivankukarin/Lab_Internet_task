@@ -1,18 +1,40 @@
 window.onload = function() {
-  let btnHideSlideContent = document.querySelector(".slider-item__btn-hide");
-  let arrElementsContentText = document.querySelectorAll(
-    ".slider-item__content-text"
-  );
+  function hideShow() {
+    let arrBtnHideSlideContent = document.querySelectorAll(
+      ".slider-item__btn-hide"
+    );
+    let arrElementsContentText = document.querySelectorAll(
+      ".slider-item__content-text"
+    );
+    let arrBtnTextHideSlideContent = document.querySelectorAll(
+      ".slider-item__btn-hide-text"
+    );
 
-  function toggleHideBlock(arrElements, classNameAdd) {
-    for (element of arrElements) {
-      element.classList.toggle(classNameAdd);
+    function toggleHideBlock(arrElements, classNameAdd) {
+      for (element of arrElements) {
+        element.classList.toggle(classNameAdd);
+
+        if (element.classList.contains(classNameAdd)) {
+          for (elemText of arrBtnTextHideSlideContent) {
+            elemText.textContent = "развернуть";
+          }
+        } else {
+          for (elemText of arrBtnTextHideSlideContent) {
+            elemText.textContent = "скрыть";
+          }
+        }
+      }
+    }
+
+    for (button of arrBtnHideSlideContent) {
+      button.addEventListener("click", () => {
+        toggleHideBlock(
+          arrElementsContentText,
+          "slider-item__content-text-hide"
+        );
+      });
     }
   }
-
-  btnHideSlideContent.addEventListener("click", () => {
-    toggleHideBlock(arrElementsContentText, "slider-item__content-text-hide");
-  });
 
   function slider(block) {
     let sliderItems = block.querySelectorAll(".slider__item");
@@ -57,7 +79,6 @@ window.onload = function() {
         arr[index + 1].classList.add("slider__item-active");
         currentSlide.textContent++;
       }
-
       checkSliderArrows();
     });
 
@@ -70,12 +91,11 @@ window.onload = function() {
         arr[index - 1].classList.add("slider__item-active");
         currentSlide.textContent--;
       }
-
       checkSliderArrows();
     });
-
     checkSliderArrows();
   }
 
+  hideShow();
   slider(document.querySelector(".main-profiles"));
 };
