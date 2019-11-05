@@ -40,7 +40,7 @@ body {
 
 .header-top__white {
   background-color: #ffffff;
-  transition: background-color 1s ease-in-out;
+  transition: background-color 0.3s linear;
 }
 .header-top__white .header-logo {
   background-image: url(/img/header_logo__black.svg);

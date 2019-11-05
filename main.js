@@ -1,5 +1,5 @@
 window.onload = function() {
-  function hideShow() {
+  function hideShowTextBlockProfiles() {
     let arrBtnHideSlideContent = document.querySelectorAll(
       ".slider-item__btn-hide"
     );
@@ -96,6 +96,40 @@ window.onload = function() {
     checkSliderArrows();
   }
 
-  hideShow();
+  // function addWhiteHeaderTop (element){
+  //   if (!element.classList.contains("header-top__white")){
+  //     element.classList.add("header-top__white")
+  //   }
+  // }
+
+  // function removeWhiteHeaderTop (element){
+  //   if (element.classList.contains("header-top__white")){
+  //     element.classList.remove("header-top__white")
+  //   }
+  // }
+
+  let headerTop = document.querySelector(".header-top");
+
+  window.addEventListener("scroll", () => {
+    let header = document.querySelector(".header");
+    let positionElementOnScreen = header.getBoundingClientRect().bottom;
+    let headerTopHeight = getComputedStyle(headerTop).height;
+    headerTopHeight = Number(headerTopHeight.slice(0, -2));
+    
+    if (header.getBoundingClientRect().width <= 320){
+      positionElementOnScreen = positionElementOnScreen - 320;
+    }
+    if (positionElementOnScreen <= headerTopHeight) {
+      headerTop.classList.add("header-top__white");
+    } else {
+      headerTop.classList.remove("header-top__white");
+    }
+  });
+
+  //   document.body.style.overflow = 'hidden'
+
+  //  document.body.style.overflow = ''
+
+  hideShowTextBlockProfiles();
   slider(document.querySelector(".main-profiles"));
 };
