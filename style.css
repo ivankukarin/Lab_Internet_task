@@ -559,22 +559,6 @@ header li {
   display: none;
 }
 
-.slider__item-active {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: nowrap;
-  padding-left: 96px;
-  padding-right: 96px;
-}
-@media screen and (max-width: 320px) {
-  .slider__item-active {
-    justify-content: center;
-    flex-wrap: wrap;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-}
-
 .slider-item__h2 {
   margin: 0;
   padding-top: 26px;
@@ -731,7 +715,7 @@ header li {
 
 .slider-control {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   width: 225px;
   padding-top: 32px;
@@ -750,8 +734,13 @@ header li {
 }
 
 .slider__arrow {
+  display: none;
+  line-height: 0;
+  font-size: 0;
   width: 30px;
   height: 25px;
+  background-image: url(/img/profiles-arrow.svg);
+  cursor: pointer;
 }
 .slider__arrow svg {
   fill: #888888;

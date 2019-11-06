@@ -39,23 +39,28 @@ window.onload = function() {
   }
 
   function slider(block) {
-    let sliderItems = block.querySelectorAll(".slider__item");
-    let btnPrev = block.querySelector(".slider__arrow-prev");
-    let btnNext = block.querySelector(".slider__arrow-next");
+    
+    let sliderItems = block.querySelectorAll(".slick-slide");
+    let btnPrev = block.querySelector(".slick-prev");
+    let btnNext = block.querySelector(".slick-next");
     let currentSlide = block.querySelector(".slider-numeration__current-slide");
     let valueOfSlides = block.querySelector(
       ".slider-numeration__value-of-slides"
     );
+    let buttonsArrow = document.querySelectorAll('.slick-arrow');
+
+
 
     valueOfSlides.textContent = sliderItems.length;
 
     function hasClassActive(element) {
-      return element.classList.contains("slider__item-active");
+      return element.classList.contains("slick-active");
     }
 
     function checkSliderArrows() {
       let arr = Array.from(sliderItems);
       let index = arr.findIndex(hasClassActive);
+      currentSlide.textContent = index+1;
 
       if (index + 1 < arr.length) {
         if (!btnNext.classList.contains("slider__arrow-active"))
@@ -72,29 +77,35 @@ window.onload = function() {
       }
     }
 
-    btnNext.addEventListener("click", () => {
-      let arr = Array.from(sliderItems);
-      let index = arr.findIndex(hasClassActive);
+    for (button of buttonsArrow){
+      button.addEventListener('click', checkSliderArrows);
+    }
 
-      if (index != arr.length - 1) {
-        arr[index].classList.remove("slider__item-active");
-        arr[index + 1].classList.add("slider__item-active");
-        currentSlide.textContent++;
-      }
-      checkSliderArrows();
-    });
+    block.addEventListener('mouseup', checkSliderArrows);
 
-    btnPrev.addEventListener("click", () => {
-      let arr = Array.from(sliderItems);
-      let index = arr.findIndex(hasClassActive);
+    // btnNext.addEventListener("click", () => {
+    //   let arr = Array.from(sliderItems);
+    //   let index = arr.findIndex(hasClassActive);
 
-      if (index != 0) {
-        arr[index].classList.remove("slider__item-active");
-        arr[index - 1].classList.add("slider__item-active");
-        currentSlide.textContent--;
-      }
-      checkSliderArrows();
-    });
+    //   if (index != arr.length - 1) {
+    //     arr[index].classList.remove("slider__item-active");
+    //     arr[index + 1].classList.add("slider__item-active");
+    //     currentSlide.textContent++;
+    //   }
+    //   checkSliderArrows();
+    // });
+
+    // btnPrev.addEventListener("click", () => {
+    //   let arr = Array.from(sliderItems);
+    //   let index = arr.findIndex(hasClassActive);
+
+    //   if (index != 0) {
+    //     arr[index].classList.remove("slider__item-active");
+    //     arr[index - 1].classList.add("slider__item-active");
+    //     currentSlide.textContent=index
+    //   }
+    //   checkSliderArrows();
+    // });
     checkSliderArrows();
   }
 
