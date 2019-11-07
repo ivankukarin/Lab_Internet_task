@@ -31,9 +31,6 @@
   width: 30px;
   height: 25px;
   padding: 0;
-  /* -webkit-transform: translate(0, -50%);
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%); */
 
   cursor: pointer;
 
@@ -41,15 +38,17 @@
   border: none;
   outline: none;
   background: transparent;
-  background-image: url(/img/profiles-arrow.svg);
+  background-image: url(img/profiles-arrow.svg);
 }
 
 .slider__arrow-active {
-  background-image: url(/img/profiles-arrow__pink.svg);
+  background-image: url(img/profiles-arrow__pink.svg);
+  -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 .slick-next.slider__arrow-active {
-  background-image: url(/img/profiles-arrow__pink.svg);
+  background-image: url(img/profiles-arrow__pink.svg);
+  -webkit-transform: rotate(0);
   transform: rotate(0);
 }
 
@@ -58,6 +57,7 @@
 }
 
 .slick-next {
+  -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
   right: 609px;
   @media screen and (max-width: $mobile) {
@@ -65,11 +65,6 @@
   }
 }
 @media screen and (max-width: 320px) {
-  /* .slick-prev,
-  .slick-next {
-    top: 915px;
-  } */
-
   .slick-arrow {
     top: 915px;
   }
@@ -81,20 +76,6 @@
     left: 228px;
   }
 }
-
-/* [dir='rtl'] .slick-next
-{
-    right: auto;
-    left: -25px;
-}
-.slick-next:before
-{
-    content: '→';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '←';
-} */
 
 /* Dots */
 .slick-dotted.slick-slider {

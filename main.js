@@ -7,24 +7,21 @@ window.onload = function() {
     let top = element.getBoundingClientRect().top;
     let bottom = element.getBoundingClientRect().bottom;
     height = bottom - top;
-    console.log(height);
     return height;
   }
 
   for (arrow of buttonsArrow) {
     topArrow = getComputedStyle(arrow).top;
-    console.log(topArrow);
   }
 
   let heightContentTextSliderWithoutPx = defineHeights(
     document.querySelector(".slider-item__content-text")
   );
-  console.log(heightContentTextSliderWithoutPx);
+
   let topArrowMinusHeightContentTextSlider =
     Number(topArrow.slice(0, -2)) -
     Number(heightContentTextSliderWithoutPx) +
     "px";
-  console.log(topArrowMinusHeightContentTextSlider);
 
   function hideShowTextBlockProfiles() {
     let arrBtnHideSlideContent = document.querySelectorAll(
@@ -113,8 +110,6 @@ window.onload = function() {
     //   element.style.top = getComputedStyle(numberOfCurrentSlide).top;
     // }
 
-    console.log(buttonsArrow);
-
     for (arrow of buttonsArrow) {
       arrow.addEventListener("click", () => {
         checkSliderArrows();
@@ -123,43 +118,7 @@ window.onload = function() {
 
     block.addEventListener("mouseup", checkSliderArrows);
     block.addEventListener("touchend", checkSliderArrows);
-
-    // btnNext.addEventListener("click", () => {
-    //   let arr = Array.from(sliderItems);
-    //   let index = arr.findIndex(hasClassActive);
-
-    //   if (index != arr.length - 1) {
-    //     arr[index].classList.remove("slider__item-active");
-    //     arr[index + 1].classList.add("slider__item-active");
-    //     currentSlide.textContent++;
-    //   }
-    //   checkSliderArrows();
-    // });
-
-    // btnPrev.addEventListener("click", () => {
-    //   let arr = Array.from(sliderItems);
-    //   let index = arr.findIndex(hasClassActive);
-
-    //   if (index != 0) {
-    //     arr[index].classList.remove("slider__item-active");
-    //     arr[index - 1].classList.add("slider__item-active");
-    //     currentSlide.textContent=index
-    //   }
-    //   checkSliderArrows();
-    // });
   }
-
-  // function addWhiteHeaderTop (element){
-  //   if (!element.classList.contains("header-top__white")){
-  //     element.classList.add("header-top__white")
-  //   }
-  // }
-
-  // function removeWhiteHeaderTop (element){
-  //   if (element.classList.contains("header-top__white")){
-  //     element.classList.remove("header-top__white")
-  //   }
-  // }
 
   let headerTop = document.querySelector(".header-top");
   let headerMain = document.querySelector(".header-main");
@@ -206,10 +165,6 @@ window.onload = function() {
       }
     }
   });
-
-  //   document.body.style.overflow = 'hidden'
-
-  //  document.body.style.overflow = ''
 
   hideShowTextBlockProfiles();
   slider(document.querySelector(".main-profiles"));
