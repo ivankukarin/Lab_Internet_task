@@ -105,3 +105,9 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
+@media screen and (max-width: 320px) {
+  .slick-slide {
+    overflow: hidden;
+    padding: 0 10px;
+  }
+}

@@ -1,5 +1,30 @@
 window.onload = function() {
   localStorage.menu = false;
+  let topArrow;
+  let buttonsArrow = document.querySelectorAll(".slick-arrow");
+
+  function defineHeights(element) {
+    let top = element.getBoundingClientRect().top;
+    let bottom = element.getBoundingClientRect().bottom;
+    height = bottom - top;
+    console.log(height);
+    return height;
+  }
+
+  for (arrow of buttonsArrow) {
+    topArrow = getComputedStyle(arrow).top;
+    console.log(topArrow);
+  }
+
+  let heightContentTextSliderWithoutPx = defineHeights(
+    document.querySelector(".slider-item__content-text")
+  );
+  console.log(heightContentTextSliderWithoutPx);
+  let topArrowMinusHeightContentTextSlider =
+    Number(topArrow.slice(0, -2)) -
+    Number(heightContentTextSliderWithoutPx) +
+    "px";
+  console.log(topArrowMinusHeightContentTextSlider);
 
   function hideShowTextBlockProfiles() {
     let arrBtnHideSlideContent = document.querySelectorAll(
@@ -12,17 +37,23 @@ window.onload = function() {
       ".slider-item__btn-hide-text"
     );
 
-    function toggleHideBlock(arrElements, classNameAdd) {
+    function toggleHideBlock(arrElements, checkClassName) {
       for (element of arrElements) {
-        element.classList.toggle(classNameAdd);
+        element.classList.toggle(checkClassName);
 
-        if (element.classList.contains(classNameAdd)) {
-          for (elemText of arrBtnTextHideSlideContent) {
-            elemText.textContent = "развернуть";
+        if (element.classList.contains(checkClassName)) {
+          for (textOfButton of arrBtnTextHideSlideContent) {
+            textOfButton.textContent = "развернуть";
+          }
+          for (arrow of buttonsArrow) {
+            arrow.style.top = topArrowMinusHeightContentTextSlider;
           }
         } else {
-          for (elemText of arrBtnTextHideSlideContent) {
-            elemText.textContent = "скрыть";
+          for (textOfButton of arrBtnTextHideSlideContent) {
+            textOfButton.textContent = "скрыть";
+          }
+          for (arrow of buttonsArrow) {
+            arrow.style.top = topArrow;
           }
         }
       }
@@ -39,17 +70,15 @@ window.onload = function() {
   }
 
   function slider(block) {
-    
     let sliderItems = block.querySelectorAll(".slick-slide");
     let btnPrev = block.querySelector(".slick-prev");
     let btnNext = block.querySelector(".slick-next");
-    let currentSlide = block.querySelector(".slider-numeration__current-slide");
+    let numberOfCurrentSlide = block.querySelector(
+      ".slider-numeration__current-slide"
+    );
     let valueOfSlides = block.querySelector(
       ".slider-numeration__value-of-slides"
     );
-    let buttonsArrow = document.querySelectorAll('.slick-arrow');
-
-
 
     valueOfSlides.textContent = sliderItems.length;
 
@@ -60,7 +89,7 @@ window.onload = function() {
     function checkSliderArrows() {
       let arr = Array.from(sliderItems);
       let index = arr.findIndex(hasClassActive);
-      currentSlide.textContent = index+1;
+      numberOfCurrentSlide.textContent = index + 1;
 
       if (index + 1 < arr.length) {
         if (!btnNext.classList.contains("slider__arrow-active"))
@@ -77,11 +106,23 @@ window.onload = function() {
       }
     }
 
-    for (button of buttonsArrow){
-      button.addEventListener('click', checkSliderArrows);
+    // function setTopAtNumeration(element) {
+    //   let numberOfCurrentSlide = document.querySelector(
+    //     ".slider-numeration__current-slide"
+    //   );
+    //   element.style.top = getComputedStyle(numberOfCurrentSlide).top;
+    // }
+
+    console.log(buttonsArrow);
+
+    for (arrow of buttonsArrow) {
+      arrow.addEventListener("click", () => {
+        checkSliderArrows();
+      });
     }
 
-    block.addEventListener('mouseup', checkSliderArrows);
+    block.addEventListener("mouseup", checkSliderArrows);
+    block.addEventListener("touchend", checkSliderArrows);
 
     // btnNext.addEventListener("click", () => {
     //   let arr = Array.from(sliderItems);
@@ -106,7 +147,6 @@ window.onload = function() {
     //   }
     //   checkSliderArrows();
     // });
-    checkSliderArrows();
   }
 
   // function addWhiteHeaderTop (element){

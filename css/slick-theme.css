@@ -60,6 +60,26 @@
 .slick-next {
   transform: rotate(-180deg);
   right: 609px;
+  @media screen and (max-width: $mobile) {
+    right: 62px;
+  }
+}
+@media screen and (max-width: 320px) {
+  /* .slick-prev,
+  .slick-next {
+    top: 915px;
+  } */
+
+  .slick-arrow {
+    top: 915px;
+  }
+  .slick-prev {
+    left: 62px;
+  }
+
+  .slick-next {
+    left: 228px;
+  }
 }
 
 /* [dir='rtl'] .slick-next
