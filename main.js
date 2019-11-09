@@ -120,22 +120,22 @@ window.onload = function() {
     block.addEventListener("touchend", checkSliderArrows);
   }
 
-  let headerTop = document.querySelector(".header-top");
+  let headerTop = document.querySelector(".nav-wrapper");
   let headerMain = document.querySelector(".header-main");
-  let buttonMenu = document.querySelector(".header-list__btn-menu");
+  let buttonMenu = document.querySelector(".nav-bar__btn-menu");
   let headerMenu = document.querySelector(".header-menu");
-  let headerPhone = document.querySelector(".header-list__phone");
-  let headerSocial = document.querySelector(".header-list__social");
+  let headerPhone = document.querySelector(".nav-bar__phone");
+  let headerSocial = document.querySelector(".nav-bar__social");
 
   buttonMenu.addEventListener("click", unhideMenu);
 
   function unhideMenu() {
-    headerTop.classList.add("header-top__white");
+    headerTop.classList.add("nav-wrapper__white");
     headerMain.classList.toggle("header-main__menu-white");
     headerMenu.classList.toggle("header-menu__unhide");
-    headerPhone.classList.toggle("header-list__phone-menu");
-    headerSocial.classList.toggle("header-list__social-menu");
-    buttonMenu.classList.toggle("header-list__btn-menu-open");
+    headerPhone.classList.toggle("nav-bar__phone-menu");
+    headerSocial.classList.toggle("nav-bar__social-menu");
+    buttonMenu.classList.toggle("nav-bar__btn-menu-open");
 
     if (headerMain.classList.contains("header-main__menu-white")) {
       window.scrollTo(pageXOffset, 0);
@@ -144,7 +144,7 @@ window.onload = function() {
     } else {
       document.body.style.overflow = "";
       localStorage.menu = false;
-      headerTop.classList.remove("header-top__white");
+      headerTop.classList.remove("nav-wrapper__white");
     }
   }
 
@@ -159,9 +159,9 @@ window.onload = function() {
         positionElementOnScreen = positionElementOnScreen - 320;
       }
       if (positionElementOnScreen <= headerTopHeight) {
-        headerTop.classList.add("header-top__white");
+        headerTop.classList.add("nav-wrapper__white");
       } else {
-        headerTop.classList.remove("header-top__white");
+        headerTop.classList.remove("nav-wrapper__white");
       }
     }
   });

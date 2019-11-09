@@ -6,7 +6,8 @@
   display: block;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-  width: 1444px;
+  width: 85.15vw;
+  
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -110,7 +111,7 @@
   }
 
   .slick-slider {
-    width: 300px;
+    width: 93.75vw;
   }
   .slick-slide {
     overflow: hidden;
