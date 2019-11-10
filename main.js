@@ -3,26 +3,6 @@ window.onload = function() {
   let topArrow;
   let buttonsArrow = document.querySelectorAll(".slick-arrow");
 
-  function defineHeights(element) {
-    let top = element.getBoundingClientRect().top;
-    let bottom = element.getBoundingClientRect().bottom;
-    height = bottom - top;
-    return height;
-  }
-
-  for (arrow of buttonsArrow) {
-    topArrow = getComputedStyle(arrow).top;
-  }
-
-  let heightContentTextSliderWithoutPx = defineHeights(
-    document.querySelector(".slider-item__content-text")
-  );
-
-  let topArrowMinusHeightContentTextSlider =
-    Number(topArrow.slice(0, -2)) -
-    Number(heightContentTextSliderWithoutPx) +
-    "px";
-
   function hideShowTextBlockProfiles() {
     let arrBtnHideSlideContent = document.querySelectorAll(
       ".slider-item__btn-hide"
@@ -118,6 +98,8 @@ window.onload = function() {
 
     block.addEventListener("mouseup", checkSliderArrows);
     block.addEventListener("touchend", checkSliderArrows);
+
+    checkSliderArrows();
   }
 
   let headerTop = document.querySelector(".nav-wrapper");

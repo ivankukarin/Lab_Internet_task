@@ -548,7 +548,7 @@ header li {
 .b-slider {
   display: flex;
   justify-content: space-between;
-  width: 100%;
+  
 }
 
 .b-slider-scope {
@@ -766,8 +766,7 @@ header li {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  width: 225px;
+  
   padding-top: 32px;
   @media screen and (max-width: $mobile) {
     width: 196px;

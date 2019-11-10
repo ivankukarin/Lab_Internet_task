@@ -31,7 +31,7 @@
   height: 25px;
   padding: 0;
   margin: 0;
-  top: 82px;
+  
   
   cursor: pointer;
 
@@ -54,14 +54,15 @@
 }
 
 .slick-prev {
-  left: calc(50% - 144px);
-  
+  left: calc( 50% - 112px);
+  top: 83px;
 }
 
 .slick-next {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
-  right: 80px;
+  left: calc( 50% + 82px);
+  top: 58px;
 
   @media screen and (max-width: $mobile) {
     right: 62px;
