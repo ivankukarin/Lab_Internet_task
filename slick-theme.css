@@ -31,8 +31,7 @@
   height: 25px;
   padding: 0;
   margin: 0;
-  
-  
+
   cursor: pointer;
 
   color: transparent;
@@ -54,24 +53,20 @@
 }
 
 .slick-prev {
-  left: calc( 50% - 112px);
+  left: calc(50% - 112px);
   top: 83px;
 }
 
 .slick-next {
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
-  left: calc( 50% + 82px);
+  left: calc(50% + 82px);
   top: 58px;
 
-  @media screen and (max-width: $mobile) {
-    right: 62px;
-  }
+ 
 }
 @media screen and (max-width: 320px) {
-  .slick-arrow {
-    top: 915px;
-  }
+ 
   .slick-prev {
     left: 62px;
   }

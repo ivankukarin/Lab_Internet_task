@@ -22,15 +22,9 @@ window.onload = function() {
           for (textOfButton of arrBtnTextHideSlideContent) {
             textOfButton.textContent = "развернуть";
           }
-          for (arrow of buttonsArrow) {
-            arrow.style.top = topArrowMinusHeightContentTextSlider;
-          }
         } else {
           for (textOfButton of arrBtnTextHideSlideContent) {
             textOfButton.textContent = "скрыть";
-          }
-          for (arrow of buttonsArrow) {
-            arrow.style.top = topArrow;
           }
         }
       }

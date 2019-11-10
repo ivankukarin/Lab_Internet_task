@@ -7,7 +7,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   width: 85.15vw;
-  
 
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -105,16 +104,19 @@
 .slick-arrow.slick-hidden {
   display: none;
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 959px) {
   .main-profiles {
     overflow: hidden;
   }
 
   .slick-slider {
-    width: 93.75vw;
+    width: 98.15vw;
   }
   .slick-slide {
+    width: auto;
     overflow: hidden;
-    padding: 0 10px;
+    padding: 0 9vw 0 1vw;
+
+    padding: 0 6vw 0 7vw;
   }
 }

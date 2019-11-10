@@ -1,6 +1,5 @@
 $base-color: #ff3754;
-$mobile: 320px;
-$transition-duration-time: 1s;
+$mobile: 959px;
 
 body {
   width: 100%;
@@ -13,17 +12,17 @@ body {
   padding: 0;
 }
 .header-main {
-  padding: 0px 85px 84px 89px;
+  padding: 0px 4.43vw 4.38vw 4.64vw;
 
   max-width: 100%;
-  background-image: url(img/00.jpg);
+  background-image: url(./img/00.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 
   @media screen and (max-width: $mobile) {
-    padding: 0px 9px 30px 10px;
+    padding: 0px 2.81vw 9.4vw 3.1vw;
 
-    background-image: url(img/mobile/header_background320.png);
+    background-image: url(./img/mobile/header_background320.png);
     background-size: contain;
   }
 }
@@ -46,7 +45,7 @@ body {
 }
 
 .nav-wrapper {
-  position: fixed;
+  position: absolute;
   padding: 0 4.43vw 0 4.95vw;
   top: 0;
   left: 0;
@@ -58,25 +57,30 @@ body {
   align-items: center;
   justify-content: space-between;
   height: 110px;
-  width: 100vw;
+  width: 100%;
 
   box-sizing: border-box;
 
   @media screen and (max-width: $mobile) {
-    height: 59px;
-    width: 320px;
+    padding: 0 2.8vw 0 4.4vw;
+    height: 18.4vw;
   }
 }
 
 .nav-wrapper__white {
+  position: fixed;
   z-index: 500;
+  box-sizing: border-box;
+
   background-color: #ffffff;
-  transition: background-color 0.3s linear;
+
+  transition-duration: 0.3s;
+  transition-timing-function: linear;
 
   .header-logo {
-    background-image: url(/img/header_logo__black.svg);
+    background-image: url(./img/header_logo__black.svg);
     @media screen and (max-width: $mobile) {
-      background-image: url(/img/mobile/header_logo__black.svg);
+      background-image: url(./img/mobile/header_logo__black.svg);
     }
   }
   .phone-number {
@@ -85,6 +89,7 @@ body {
   .btn-menu__rectangle {
     background-color: #303030;
   }
+  
 }
 
 .header-logo {
@@ -93,16 +98,15 @@ body {
   height: 58px;
   left: 0;
 
-  background-image: url(/img/header_logo.svg);
+  background-image: url(./img/header_logo.svg);
 
   cursor: pointer;
 
   @media screen and (max-width: $mobile) {
-    width: 102px;
-    height: 27px;
-    left: 14px;
+    width: 31.9vw;
+    height: 8.4vw;
 
-    background-image: url(/img/mobile/header_LOGO320.svg);
+    background-image: url(./img/mobile/header_LOGO320.svg);
     background-repeat: no-repeat;
   }
 }
@@ -126,10 +130,6 @@ body {
   margin: 0;
 
   list-style: none;
-  @media screen and (max-width: $mobile) {
-    left: 276px;
-    padding: 0;
-  }
 }
 
 .nav-bar__phone {
@@ -158,8 +158,8 @@ body {
   @media screen and (max-width: $mobile) {
     display: flex;
     position: fixed;
-    top: 83px;
-    left: 46px;
+    top: 25.9vw;
+    left: 14.4vw;
   }
 }
 
@@ -181,8 +181,8 @@ header li {
   @media screen and (max-width: $mobile) {
     display: flex;
     position: fixed;
-    top: 380px;
-    left: 112px;
+    top: 118.8vw;
+    left: 35vw;
   }
 }
 
@@ -217,10 +217,8 @@ header li {
 
   @media screen and (max-width: $mobile) {
     margin: 0;
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    height: 4.1vw;
+    padding: 4.1vw 0;
   }
 }
 
@@ -246,7 +244,7 @@ header li {
 
   @media screen and (max-width: $mobile) {
     padding: 0;
-    width: 35px;
+    width: 10.9vw;
   }
 }
 
@@ -262,9 +260,9 @@ header li {
   color: #ffffff;
 
   @media screen and (max-width: $mobile) {
-    padding-top: 151px;
-    font-size: 50px;
-    line-height: 50px;
+    padding-top: 47.2vw;
+    font-size: 15.6vw;
+    line-height: 15.6vw;
   }
 }
 
@@ -284,8 +282,8 @@ header li {
   color: #ffffff;
 
   @media screen and (max-width: $mobile) {
-    font-size: 20px;
-    line-height: 24px;
+    font-size: 6.3vw;
+    line-height: 7.5vw;
   }
 }
 
@@ -308,21 +306,21 @@ header li {
   align-items: center;
 
   @media screen and (max-width: $mobile) {
-    height: 40px;
+    height: 12.5vw;
   }
 
   &:nth-child(1) .award-item__award {
     width: 70px;
     height: 70px;
 
-    background-image: url(/img/award_1.svg);
+    background-image: url(./img/award_1.svg);
     background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
-      width: 47px;
-      height: 47px;
+      width: 14.7vw;
+      height: 14.7vw;
 
-      background-image: url(/img/mobile/award_01_320.svg);
+      background-image: url(./img/mobile/award_01_320.svg);
     }
   }
 
@@ -330,14 +328,14 @@ header li {
     width: 70px;
     height: 70px;
 
-    background-image: url(/img/award_02.svg);
+    background-image: url(./img/award_02.svg);
     background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
-      width: 47px;
-      height: 47px;
+      width: 14.7vw;
+      height: 14.7vw;
 
-      background-image: url(/img/mobile/award_02_320.svg);
+      background-image: url(./img/mobile/award_02_320.svg);
     }
   }
 
@@ -348,16 +346,16 @@ header li {
     padding-left: 19px;
     padding-right: 19px;
 
-    background: url(/img/award_03.svg) 50% 50% no-repeat;
+    background: url(./img/award_03.svg) 50% 50% no-repeat;
 
     @media screen and (max-width: $mobile) {
-      width: 22px;
-      height: 27px;
+      width: 6.9vw;
+      height: 8.4vw;
 
-      padding-left: 12.5px;
-      padding-right: 12.5px;
+      padding-left: 3.9vw;
+      padding-right: 3.9vw;
 
-      background: url(/img/mobile/award_03_320.svg) 50% 50% no-repeat;
+      background: url(./img/mobile/award_03_320.svg) 50% 50% no-repeat;
     }
   }
 
@@ -365,14 +363,14 @@ header li {
     width: 70px;
     height: 70px;
 
-    background-image: url(/img/award_02.svg);
+    background-image: url(./img/award_02.svg);
     background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
-      width: 47px;
-      height: 47px;
+      width: 14.7vw;
+      height: 14.7vw;
 
-      background-image: url(/img/mobile/award_02_320.svg);
+      background-image: url(./img/mobile/award_02_320.svg);
     }
   }
 }
@@ -385,8 +383,8 @@ header li {
   text-transform: lowercase;
 
   @media screen and (max-width: $mobile) {
-    font-size: 14px;
-    line-height: 17px;
+    font-size: 4.4vw;
+    line-height: 5.3vw;
     color: #303030;
   }
 }
@@ -406,18 +404,18 @@ header li {
   text-transform: none;
 
   @media screen and (max-width: $mobile) {
-    height: 34px;
-    padding-left: 6px;
-    padding-right: 6px;
+    height: 10.5;
+    padding-left: 1.9vw;
+    padding-right: 1.9vw;
 
-    font-size: 20px;
+    font-size: 6.3vw;
     color: #ffffff;
   }
 }
 
 .award-item__award svg {
   @media screen and (max-width: $mobile) {
-    height: 34px;
+    height: 10.6;
   }
 }
 .award-item__worldwide {
@@ -426,17 +424,17 @@ header li {
   height: 22px;
 
   @media screen and (max-width: $mobile) {
-    padding-right: 13px;
-    width: 15px;
-    height: 15px;
+    padding-right: 10.6vw;
+    width: 4.7vw;
+    height: 4.7vw;
   }
 }
 
 .header-btn {
   padding-top: 106px;
   @media screen and (max-width: $mobile) {
-    padding-top: 13px;
-    padding-bottom: 12px;
+    padding-top: 4.1vw;
+    padding-bottom: 3.8vw;
     order: 0;
   }
 }
@@ -463,10 +461,10 @@ header li {
   border-radius: 4px;
 
   @media screen and (max-width: $mobile) {
-    width: 300px;
+    width: 93.8vw;
 
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 5vw;
+    line-height: 5.9vw;
   }
 }
 
@@ -478,7 +476,7 @@ header li {
 
   left: 0px;
   top: 110px;
-  width: 1920px;
+  width: 100%;
   height: 850px;
   display: flex;
   margin: 0;
@@ -489,9 +487,9 @@ header li {
   align-items: center;
 
   @media screen and (max-width: $mobile) {
-    top: 59px;
-    width: 320px;
-    height: 346px;
+    top: 18.4vw;
+
+    height: 108.1vw;
   }
 }
 .header-menu__title {
@@ -506,9 +504,10 @@ header li {
   cursor: pointer;
 
   @media screen and (max-width: $mobile) {
-    font-size: 20px;
-    line-height: 24px;
-    margin-bottom: 15px;
+    margin-bottom: 4.7vw;
+
+    font-size: 6.3vw;
+    line-height: 7.5vw;
   }
 }
 
@@ -524,7 +523,7 @@ header li {
   background: #ffffff;
 
   @media screen and (max-width: $mobile) {
-    padding: 310vw 0px 9.38vw 0px;
+    padding: 3.1vw 3.1vw 9.38vw 2.1vw;
   }
 }
 
@@ -538,8 +537,8 @@ header li {
   color: #ff3754;
 
   @media screen and (max-width: $mobile) {
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 12.5vw;
+    line-height: 12.5vw;
     margin: 0;
     padding: 0;
   }
@@ -548,7 +547,6 @@ header li {
 .b-slider {
   display: flex;
   justify-content: space-between;
-  
 }
 
 .b-slider-scope {
@@ -564,7 +562,7 @@ header li {
 .scope__rectangle {
   width: 52px;
   height: 30px;
-  background-image: url(/img/pink_rectangle_horiz.svg);
+  background-image: url(./img/pink_rectangle_horiz.svg);
 }
 
 .scope__vertical-rectangle {
@@ -587,8 +585,9 @@ header li {
   padding-bottom: 30px;
   width: 49%;
   @media screen and (max-width: $mobile) {
+    padding-bottom: 0;
     display: flex;
-    width: 300px;
+    width: 85vw;    
     flex-direction: column;
     align-items: center;
   }
@@ -602,12 +601,12 @@ header li {
   padding-right: 5vw;
 
   box-sizing: border-box;
-  
 
-  @media screen and (max-width: 320px) {
+  @media screen and (max-width: $mobile) {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0;
   }
 }
 
@@ -623,11 +622,11 @@ header li {
   color: #ff3754;
 
   @media screen and (max-width: $mobile) {
-    padding-top: 27px;
-    padding-bottom: 14px;
+    padding-top: 8.44vw;
+    padding-bottom: 4.4vw;
 
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 12.5vw;
+    line-height: 12.5vw;
   }
 }
 
@@ -642,8 +641,10 @@ header li {
   color: #888888;
 
   @media screen and (max-width: $mobile) {
-    font-size: 30px;
-    line-height: 30px;
+    padding-bottom: 3.1vw;
+
+    font-size: 9.4vw;
+    line-height: 9.4vw;
   }
 }
 
@@ -658,6 +659,10 @@ header li {
   letter-spacing: 0.155em;
   text-transform: uppercase;
   color: #303030;
+  @media screen and (max-width: $mobile) {
+    font-size: 4.1vw;
+    line-height: 5vw;
+  }
 }
 
 .slider-item__btn-hide {
@@ -667,8 +672,8 @@ header li {
     justify-content: center;
     align-items: center;
 
-    width: 156px;
-    height: 40px;
+    width: 48.75vw;
+    height: 12.5vw;
 
     border: 1px solid #888888;
     box-sizing: border-box;
@@ -679,8 +684,8 @@ header li {
 .slider-item__btn-hide-text {
   @media screen and (max-width: $mobile) {
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
-    font-size: 13px;
-    line-height: 16px;
+    font-size: 4.1vw;
+    line-height: 5vw;
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: #888888;
@@ -716,16 +721,21 @@ header li {
 .slider-item__content-list {
   padding-left: 18px;
   padding-bottom: 10px;
+  @media screen and (max-width: $mobile) {
+    padding-left: 0;
+    padding-bottom: 3.1vw;
+  }
 }
 
 .slider-item__list-item {
-  list-style-image: url(/img/profiles_list-style.svg);
+  list-style-image: url(./img/profiles_list-style.svg);
+  
 
   span {
     padding-left: 29px;
 
     @media screen and (max-width: $mobile) {
-      padding-left: 11px;
+      padding-left: 3.4vw
     }
   }
 }
@@ -739,37 +749,39 @@ header li {
   background-repeat: no-repeat;
   background-size: cover;
   @media screen and (max-width: $mobile) {
-    width: 128px;
-    height: 128px;
+    width: 40vw;
+    height: 40vw;
     order: -1;
-    border-radius: 64px;
+    border-radius: 20vw;
   }
 }
 
 .slider-avatar__1 {
-  background-image: url(/img/avatar1.jpg);
+  background-image: url(./img/avatar1.jpg);
 }
 .slider-avatar__2 {
-  background-image: url(/img/avatar_2.jpg);
+  background-image: url(./img/avatar_2.jpg);
 }
 .slider-avatar__3 {
-  background-image: url(/img/avatar_3.jpg);
+  background-image: url(./img/avatar_3.jpg);
 }
 .slider-avatar__4 {
-  background-image: url(/img/avatar_4.jpg);
+  background-image: url(./img/avatar_4.jpg);
 }
 .slider-avatar__5 {
-  background-image: url(/img/avatar_5.jpg);
+  background-image: url(./img/avatar_5.jpg);
 }
 
 .slider-control {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+
   padding-top: 32px;
   @media screen and (max-width: $mobile) {
-    width: 196px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    
   }
 }
 
@@ -778,32 +790,14 @@ header li {
   font-size: 24px;
   line-height: 29px;
   color: #303030;
-}
-.slider__arrow {
-  display: none;
-  line-height: 0;
-  font-size: 0;
-  width: 30px;
-  height: 25px;
-  background-image: url(/img/profiles-arrow.svg);
-  cursor: pointer;
-  svg {
-    fill: #888888;
-  }
-}
-
-.slider__arrow-next {
-  transform: rotate(-180deg);
-}
-
-.slider__arrow-active {
-  svg {
-    fill: $base-color;
+  @media screen and (max-width: $mobile) {
+    font-size: 7.5vw ;
+    line-height: 9.1vw;
   }
 }
 
 .main-partners {
-  padding: 69px 88px 76px 88px;
+  padding: 3.59vw 3.3vw 3.96vw;
   margin: 0;
   display: flex;
   flex-wrap: nowrap;
@@ -882,10 +876,9 @@ header li {
 }
 
 .partners-wrapper {
-  max-width: 1744px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media screen and (max-width: $mobile) {
     flex-direction: column;
@@ -899,37 +892,38 @@ header li {
   align-items: center;
 
   width: 412px;
+  padding: 0 16px;
 
   @media screen and (max-width: $mobile) {
     width: 320px;
   }
 
   &:nth-child(4n-3) .parnters_card-img {
-    background-image: url(/img/partners_img_facebook.svg);
+    background-image: url(./img/partners_img_facebook.svg);
 
     @media screen and (max-width: $mobile) {
-      background-image: url(/img/mobile/partners_img_facebook320.svg);
+      background-image: url(./img/mobile/partners_img_facebook320.svg);
     }
   }
   &:nth-child(4n-2) .parnters_card-img {
-    background-image: url(/img/partners_img_amazon.svg);
+    background-image: url(./img/partners_img_amazon.svg);
 
     @media screen and (max-width: $mobile) {
-      background-image: url(/img/mobile/partners_img_amazon320.svg);
+      background-image: url(./img/mobile/partners_img_amazon320.svg);
     }
   }
   &:nth-child(4n-1) .parnters_card-img {
-    background-image: url(/img/partners_img_sony.svg);
+    background-image: url(./img/partners_img_sony.svg);
 
     @media screen and (max-width: $mobile) {
-      background-image: url(/img/mobile/partners_img_sony320.svg);
+      background-image: url(./img/mobile/partners_img_sony320.svg);
     }
   }
   &:nth-child(4n) .parnters_card-img {
-    background-image: url(/img/partners_img_ae.svg);
+    background-image: url(./img/partners_img_ae.svg);
 
     @media screen and (max-width: $mobile) {
-      background-image: url(/img/mobile/partners_img_ae320.svg);
+      background-image: url(./img/mobile/partners_img_ae320.svg);
     }
   }
 }
