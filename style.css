@@ -1005,7 +1005,7 @@ header li {
         -ms-flex-align: center;
             align-items: center;
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
-    font-size: 13px;
+    font-size: 4.1vw;
     line-height: 1.23em;
     letter-spacing: 0.155em;
     text-transform: uppercase;
@@ -1135,7 +1135,7 @@ header li {
   .partners_card-description .main__text-bold {
     margin-top: 2.5vw;
     margin-bottom: 0;
-    font-size: 18px;
+    font-size: 5.6vw;
     line-height: 1.625em;
   }
 }
