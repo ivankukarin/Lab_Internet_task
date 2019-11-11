@@ -38,16 +38,17 @@
   border: none;
   outline: none;
   background: transparent;
-  background-image: url(img/profiles-arrow.svg);
+  background-image: url(./img/profiles-arrow.svg);
+  background-repeat: no-repeat;
 }
 
 .slider__arrow-active {
-  background-image: url(img/profiles-arrow__pink.svg);
+  background-image: url(./img/profiles-arrow__pink.svg);
   -webkit-transform: rotate(-180deg);
   transform: rotate(-180deg);
 }
 .slick-next.slider__arrow-active {
-  background-image: url(img/profiles-arrow__pink.svg);
+  background-image: url(./img/profiles-arrow__pink.svg);
   -webkit-transform: rotate(0);
   transform: rotate(0);
 }
@@ -62,16 +63,20 @@
   transform: rotate(-180deg);
   left: calc(50% + 82px);
   top: 58px;
-
- 
 }
-@media screen and (max-width: 320px) {
- 
+@media screen and (max-width: 959px) {
+  .slick-arrow {
+    width: 9.4vw;
+    height: 7.8vw;
+    background-size: contain;
+  }
   .slick-prev {
-    left: 62px;
+    top: 25.9vw;
+    left: 19.4vw;
   }
 
   .slick-next {
-    left: 228px;
+    top: 18.1vw;
+    left: 71.3vw;
   }
 }

@@ -64,6 +64,7 @@ body {
 .nav-wrapper__white {
   position: fixed;
   z-index: 500;
+  width: 100vw;
   box-sizing: border-box;
   background-color: #ffffff;
   transition-duration: 0.3s;
@@ -98,6 +99,7 @@ body {
     height: 8.4vw;
     background-image: url(./img/mobile/header_LOGO320.svg);
     background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -664,21 +666,36 @@ header li {
 .main__text {
   font-family: "Museo Sans Cyrl 300", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 29px;
+  line-height: 1.6em;
   color: #303030;
+}
+@media screen and (max-width: 959px) {
+  .main__text {
+    font-size: 5.63vw;
+  }
 }
 
 .main__text-small16 {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.625em;
+}
+@media screen and (max-width: 959px) {
+  .main__text-small16 {
+    font-size: 5vw;
+  }
 }
 
 .main__text-bold {
   margin-bottom: unset;
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 29px;
+  line-height: 1.6em;
   color: #000000;
+}
+@media screen and (max-width: 959px) {
+  .main__text-bold {
+    font-size: 5.63vw;
+  }
 }
 
 @media screen and (max-width: 959px) {
@@ -755,7 +772,7 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .slider-control {
-    padding-top: 30px;
+    padding-top: 9.38vw;
     padding-bottom: 0;
   }
 }
@@ -763,13 +780,11 @@ header li {
 .slider-numeration {
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
   font-size: 24px;
-  line-height: 29px;
   color: #303030;
 }
 @media screen and (max-width: 959px) {
   .slider-numeration {
     font-size: 7.5vw;
-    line-height: 9.1vw;
   }
 }
 
@@ -785,7 +800,7 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .main-partners {
-    padding: 38px 0px 40px 0px;
+    padding: 11.88vw 0px 12.5vw 0px;
   }
 }
 
@@ -795,13 +810,13 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .main-h2 {
-    padding-bottom: 40px;
+    padding-bottom: 12.5vw;
   }
 }
 
 @media screen and (max-width: 959px) {
   .main-h2__partners {
-    padding-bottom: 36px;
+    padding-bottom: 11.3vw;
   }
 }
 
@@ -813,22 +828,22 @@ header li {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 3.1vw;
+    padding-right: 3.1vw;
   }
 }
 
 @media screen and (max-width: 959px) {
   .years-item {
-    width: 63px;
-    height: 40px;
-    margin-bottom: 10px;
+    width: 19.69vw;
+    height: 12.5vw;
+    margin-bottom: 3.1vw;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1.23em;
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: #888888;
@@ -867,7 +882,8 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .partners__card {
-    width: 320px;
+    width: 100vw;
+    padding: 0 5vw;
   }
 }
 .partners__card:nth-child(4n-3) .parnters_card-img {
@@ -912,8 +928,8 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .parnters_card-img {
-    width: 320px;
-    height: 150px;
+    width: 100vw;
+    height: 46.9vw;
   }
 }
 
@@ -923,24 +939,24 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .partners_card-description {
-    width: 300px;
-    padding-bottom: 11px;
+    width: 93.8vw;
+    padding-bottom: 3.44vw;
   }
 }
 @media screen and (max-width: 959px) {
   .partners_card-description .main__text {
-    margin-top: 12px;
-    margin-bottom: 12px;
-    font-size: 16px;
-    line-height: 26px;
+    margin-top: 3.75vw;
+    margin-bottom: 3.75vw;
+    font-size: 5vw;
+    line-height: 1.625em;
   }
 }
 @media screen and (max-width: 959px) {
   .partners_card-description .main__text-bold {
-    margin-top: 8px;
+    margin-top: 2.5vw;
     margin-bottom: 0;
     font-size: 18px;
-    line-height: 29px;
+    line-height: 1.625em;
   }
 }
 
@@ -953,7 +969,7 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .b-footer {
-    padding: 8px 4px 8px 17px;
+    padding: 2.5vw 1.3vw 2.5vw 5.3vw;
   }
 }
 

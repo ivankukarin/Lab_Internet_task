@@ -70,6 +70,8 @@ body {
 .nav-wrapper__white {
   position: fixed;
   z-index: 500;
+  width: 100vw;
+
   box-sizing: border-box;
 
   background-color: #ffffff;
@@ -89,7 +91,6 @@ body {
   .btn-menu__rectangle {
     background-color: #303030;
   }
-  
 }
 
 .header-logo {
@@ -108,6 +109,7 @@ body {
 
     background-image: url(./img/mobile/header_LOGO320.svg);
     background-repeat: no-repeat;
+    background-size: contain;
   }
 }
 
@@ -587,7 +589,7 @@ header li {
   @media screen and (max-width: $mobile) {
     padding-bottom: 0;
     display: flex;
-    width: 85vw;    
+    width: 85vw;
     flex-direction: column;
     align-items: center;
   }
@@ -695,12 +697,18 @@ header li {
 .main__text {
   font-family: "Museo Sans Cyrl 300", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 29px;
+  line-height: 1.6em;
   color: #303030;
+  @media screen and (max-width: $mobile) {
+    font-size: 5.63vw;
+  }
 }
 .main__text-small16 {
   font-size: 16px;
-  line-height: 26px;
+  line-height: 1.625em;
+  @media screen and (max-width: $mobile) {
+    font-size: 5vw;
+  }
 }
 
 .main__text-bold {
@@ -708,8 +716,11 @@ header li {
 
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
   font-size: 18px;
-  line-height: 29px;
+  line-height: 1.6em;
   color: #000000;
+  @media screen and (max-width: $mobile) {
+    font-size: 5.63vw;
+  }
 }
 
 .slider-item__content-text-hide {
@@ -729,13 +740,12 @@ header li {
 
 .slider-item__list-item {
   list-style-image: url(./img/profiles_list-style.svg);
-  
 
   span {
     padding-left: 29px;
 
     @media screen and (max-width: $mobile) {
-      padding-left: 3.4vw
+      padding-left: 3.4vw;
     }
   }
 }
@@ -779,20 +789,17 @@ header li {
 
   padding-top: 32px;
   @media screen and (max-width: $mobile) {
-    padding-top: 30px;
+    padding-top: 9.38vw;
     padding-bottom: 0;
-    
   }
 }
 
 .slider-numeration {
   font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
   font-size: 24px;
-  line-height: 29px;
   color: #303030;
   @media screen and (max-width: $mobile) {
-    font-size: 7.5vw ;
-    line-height: 9.1vw;
+    font-size: 7.5vw;
   }
 }
 
@@ -808,7 +815,7 @@ header li {
   background: linear-gradient(180deg, #fdf4f4 0%, #ecf3ec 100%);
 
   @media screen and (max-width: $mobile) {
-    padding: 38px 0px 40px 0px;
+    padding: 11.88vw 0px 12.5vw 0px;
   }
 }
 
@@ -817,13 +824,13 @@ header li {
   padding-bottom: 46px;
 
   @media screen and (max-width: $mobile) {
-    padding-bottom: 40px;
+    padding-bottom: 12.5vw;
   }
 }
 
 .main-h2__partners {
   @media screen and (max-width: $mobile) {
-    padding-bottom: 36px;
+    padding-bottom: 11.3vw;
   }
 }
 
@@ -835,16 +842,16 @@ header li {
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 3.1vw;
+    padding-right: 3.1vw;
   }
 }
 
 .years-item {
   @media screen and (max-width: $mobile) {
-    width: 63px;
-    height: 40px;
-    margin-bottom: 10px;
+    width: 19.69vw;
+    height: 12.5vw;
+    margin-bottom: 3.1vw;
 
     display: flex;
     justify-content: center;
@@ -852,7 +859,7 @@ header li {
 
     font-family: "Museo Sans Cyrl 700", Arial, Helvetica, sans-serif;
     font-size: 13px;
-    line-height: 16px;
+    line-height: 1.23em;
     letter-spacing: 0.155em;
     text-transform: uppercase;
     color: #888888;
@@ -895,7 +902,8 @@ header li {
   padding: 0 16px;
 
   @media screen and (max-width: $mobile) {
-    width: 320px;
+    width: 100vw;
+    padding: 0 5vw;
   }
 
   &:nth-child(4n-3) .parnters_card-img {
@@ -937,8 +945,8 @@ header li {
   background-repeat: no-repeat;
 
   @media screen and (max-width: $mobile) {
-    width: 320px;
-    height: 150px;
+    width: 100vw;
+    height: 46.9vw;
   }
 }
 
@@ -947,26 +955,26 @@ header li {
   padding-bottom: 56px;
 
   @media screen and (max-width: $mobile) {
-    width: 300px;
-    padding-bottom: 11px;
+    width: 93.8vw;
+    padding-bottom: 3.44vw;
   }
 
   .main__text {
     @media screen and (max-width: $mobile) {
-      margin-top: 12px;
-      margin-bottom: 12px;
+      margin-top: 3.75vw;
+      margin-bottom: 3.75vw;
 
-      font-size: 16px;
-      line-height: 26px;
+      font-size: 5vw;
+      line-height: 1.625em;
     }
   }
   .main__text-bold {
     @media screen and (max-width: $mobile) {
-      margin-top: 8px;
+      margin-top: 2.5vw;
       margin-bottom: 0;
 
       font-size: 18px;
-      line-height: 29px;
+      line-height: 1.625em;
     }
   }
 }
@@ -979,7 +987,7 @@ header li {
   max-width: 100%;
 
   @media screen and (max-width: $mobile) {
-    padding: 8px 4px 8px 17px;
+    padding: 2.5vw 1.3vw 2.5vw 5.3vw;
   }
 }
 
