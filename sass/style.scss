@@ -154,6 +154,9 @@ body {
   line-height: 29px;
   color: #ffffff;
   text-decoration: none;
+  @media screen and (max-width: $mobile) {
+    font-size: 7.5vw;
+  }
 }
 
 .nav-bar__phone-menu {
@@ -489,8 +492,7 @@ header li {
   align-items: center;
 
   @media screen and (max-width: $mobile) {
-    top: 18.4vw;
-
+    top: 25.4vw;
     height: 108.1vw;
   }
 }
@@ -903,7 +905,7 @@ header li {
 
   @media screen and (max-width: $mobile) {
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0;
   }
 
   &:nth-child(4n-3) .parnters_card-img {

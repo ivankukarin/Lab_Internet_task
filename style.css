@@ -154,6 +154,11 @@ body {
   color: #ffffff;
   text-decoration: none;
 }
+@media screen and (max-width: 959px) {
+  .phone-number {
+    font-size: 7.5vw;
+  }
+}
 
 @media screen and (max-width: 959px) {
   .nav-bar__phone-menu {
@@ -543,7 +548,7 @@ header li {
 }
 @media screen and (max-width: 959px) {
   .header-menu__unhide {
-    top: 18.4vw;
+    top: 25.4vw;
     height: 108.1vw;
   }
 }
@@ -1058,7 +1063,7 @@ header li {
 @media screen and (max-width: 959px) {
   .partners__card {
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0;
   }
 }
 .partners__card:nth-child(4n-3) .parnters_card-img {
