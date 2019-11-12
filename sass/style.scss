@@ -305,6 +305,12 @@ header li {
   }
 }
 
+.award-item__award {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+  
+}
+
 .awards-item {
   height: 78px;
   display: flex;
@@ -319,7 +325,6 @@ header li {
     height: 70px;
 
     background-image: url(./img/award_1.svg);
-    background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
       width: 14.7vw;
@@ -334,7 +339,6 @@ header li {
     height: 70px;
 
     background-image: url(./img/award_02.svg);
-    background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
       width: 14.7vw;
@@ -351,7 +355,8 @@ header li {
     padding-left: 19px;
     padding-right: 19px;
 
-    background: url(./img/award_03.svg) 50% 50% no-repeat;
+    background-image: url(./img/award_03.svg);
+    background-position: 50% 50%;
 
     @media screen and (max-width: $mobile) {
       width: 6.9vw;
@@ -360,7 +365,7 @@ header li {
       padding-left: 3.9vw;
       padding-right: 3.9vw;
 
-      background: url(./img/mobile/award_03_320.svg) 50% 50% no-repeat;
+      background-image: url(./img/mobile/award_03_320.svg);
     }
   }
 
@@ -369,7 +374,6 @@ header li {
     height: 70px;
 
     background-image: url(./img/award_02.svg);
-    background-repeat: no-repeat;
 
     @media screen and (max-width: $mobile) {
       width: 14.7vw;
@@ -423,6 +427,7 @@ header li {
     height: 10.6;
   }
 }
+
 .award-item__worldwide {
   padding-right: 52px;
   width: 22px;
@@ -870,8 +875,6 @@ header li {
     border: 1px solid #888888;
     box-sizing: border-box;
     border-radius: 4px;
-
-    
   }
 }
 

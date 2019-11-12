@@ -345,6 +345,11 @@ header li {
   }
 }
 
+.award-item__award {
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+
 .awards-item {
   height: 78px;
   display: -webkit-box;
@@ -363,7 +368,6 @@ header li {
   width: 70px;
   height: 70px;
   background-image: url(./img/award_1.svg);
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 959px) {
   .awards-item:nth-child(1) .award-item__award {
@@ -376,7 +380,6 @@ header li {
   width: 70px;
   height: 70px;
   background-image: url(./img/award_02.svg);
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 959px) {
   .awards-item:nth-child(2) .award-item__award {
@@ -390,7 +393,8 @@ header li {
   height: 40px;
   padding-left: 19px;
   padding-right: 19px;
-  background: url(./img/award_03.svg) 50% 50% no-repeat;
+  background-image: url(./img/award_03.svg);
+  background-position: 50% 50%;
 }
 @media screen and (max-width: 959px) {
   .awards-item:nth-child(3) .award-item__award {
@@ -398,14 +402,13 @@ header li {
     height: 8.4vw;
     padding-left: 3.9vw;
     padding-right: 3.9vw;
-    background: url(./img/mobile/award_03_320.svg) 50% 50% no-repeat;
+    background-image: url(./img/mobile/award_03_320.svg);
   }
 }
 .awards-item:nth-child(4) .award-item__award {
   width: 70px;
   height: 70px;
   background-image: url(./img/award_02.svg);
-  background-repeat: no-repeat;
 }
 @media screen and (max-width: 959px) {
   .awards-item:nth-child(4) .award-item__award {
